@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050505;
+    color: white;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Animated red/black background */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255, 0, 0, 0.35),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(150, 0, 0, 0.3),
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #000000,
+            #170000,
+            #050000,
+            #300000,
+            #000000
+        );
+
+    background-size: 200% 200%;
+
+    animation: backgroundMove 12s ease-in-out infinite;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Main page */
+
+.container {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    animation: pageEnter 1s ease-out;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    font-size: 14px;
+    letter-spacing: 8px;
+    font-weight: bold;
+
+    color: #ff3333;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 10px rgba(255, 0, 0, 0.7),
+        0 0 30px rgba(255, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 15px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #ff5555,
+        #ffffff
+    );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation: titleGlow 5s linear infinite;
+}
+
+@keyframes titleGlow {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.subtitle {
+    color: #aaaaaa;
+    font-size: 17px;
+
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    width: min(500px, 90vw);
+}
+
+.button {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 22px;
+
+    text-decoration: none;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 50, 50, 0.25);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.button:hover {
+    transform: translateY(-5px) scale(1.02);
+
+    background: rgba(255, 30, 30, 0.13);
+
+    border-color: rgba(255, 60, 60, 0.7);
+
+    box-shadow:
+        0 15px 40px rgba(255, 0, 0, 0.2),
+        0 0 25px rgba(255, 0, 0, 0.1);
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+
+.arrow {
+    font-size: 24px;
+
+    color: #ff4444;
+
+    transition: transform 0.25s ease;
+}
+
+.button:hover .arrow {
+    transform: translateX(6px);
+}
+
+/* Code page */
+
+.code-page {
+    width: min(1000px, 92vw);
+
+    margin: 0 auto;
+
+    padding: 70px 0;
+
+    animation: pageEnter 0.7s ease-out;
+}
+
+.back {
+    display: inline-block;
+
+    margin-bottom: 35px;
+
+    color: #ff5555;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.back:hover {
+    color: white;
+    transform: translateX(-5px);
+}
+
+.code-page h1 {
+    font-size: clamp(35px, 6vw, 65px);
+
+    margin-bottom: 8px;
+}
+
+.code-page .subtitle {
+    margin-bottom: 30px;
+}
+
+pre {
+    width: 100%;
+
+    padding: 25px;
+
+    overflow-x: auto;
+
+    border-radius: 18px;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    border: 1px solid rgba(255, 50, 50, 0.25);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5);
+
+    backdrop-filter: blur(15px);
+}
+
+code {
+    color: #eeeeee;
+
+    font-family:
+        "Cascadia Code",
+        "Fira Code",
+        Consolas,
+        monospace;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
