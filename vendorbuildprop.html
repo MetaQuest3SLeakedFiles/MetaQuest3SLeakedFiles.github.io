@@ -1,1 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor build.prop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+    <div class="background"></div>
+
+    <main class="code-page">
+
+        <a href="index.html" class="back">← Back</a>
+
+        <h1>Vendor build.prop</h1>
+        <p class="subtitle">Vendor build.prop code</p>
+
+        <pre><code>
+ro.product.vendor.brand=oculus
+ro.product.vendor.device=panther
+ro.product.vendor.manufacturer=Oculus
+ro.product.vendor.model=Quest 3S
+ro.product.vendor.name=panther
+ro.product.model_for_attestation=
+ro.product.brand_for_attestation=
+ro.product.name_for_attestation=
+ro.vendor.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
+ro.vendor.product.cpu.abilist32=armeabi-v7a,armeabi
+ro.vendor.product.cpu.abilist64=arm64-v8a
+ro.vendor.build.date=Thu Jul  2 23:04:55 PDT 2026
+ro.vendor.build.date.utc=1783058695
+ro.vendor.build.fingerprint=oculus/panther/panther:14/UP1A.231005.007.A1/1b95-d26f-0004-0000.twshared37495.02.cco3.tw.fbinfra.net:user/abl_signing_keys:release,amss_signing_keys:release,release-keys
+ro.vendor.build.id=UP1A.231005.007.A1
+ro.vendor.build.tags=abl_signing_keys:release,amss_signing_keys:release,release-keys
+ro.vendor.build.type=user
+ro.vendor.build.version.incremental=3594280027800610
+ro.vendor.build.version.release=14
+ro.vendor.build.version.release_or_codename=14
+ro.vendor.build.version.sdk=34
+####################################
+# from device/meta/anorak-common/vendor.prop
+####################################
+# Audio
+vendor.audio.feature.adsp_watchdog.enable=1
+vendor.audio_hal.period_size=192
+# Camera
+persist.vendor.camera.flicker_mode_dc=1
+persist.vendor.camera.hal=xrcamera
+# dex2oat
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.dex2oat-threads=2
+# Display
+vendor.display.disable_3d_adaptive_tm=1
+vendor.display.disable_offline_rotator=1
+vendor.display.disable_sdr_dimming=1
+vendor.display.disable_sdr_histogram=1
+vendor.display.disable_stc_dimming=1
+vendor.display.enable_async_vds_creation=1
+vendor.display.enable_hist_intr=1
+vendor.display.idle_time=0
+vendor.display.idle_time_inactive=0
+vendor.gralloc.use_dma_buf_heaps=1
+# Graphics
+graphics.gpu.profiler.support=true
+ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
+# Init
+vendor.skip.init=0
+# Media
+debug.c2.use_dmabufheaps=1
+debug.stagefright.c2inputsurface=-1
+debug.stagefright.omx_default_rank=0
+vendor.media.target_variant=_anorak
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SXR2230P
+# Subsystem Reset
+persist.vendor.ssr.enable_cdsp_ramdump=1
+persist.vendor.ssr.enable_ramdump=1
+persist.vendor.ssr.restart_level=ALL_ENABLE
+vendor.fastrpc.process.attrs=0x1
+# Syncboss HAL
+vendor.syncbosshal.disable_uart_thread=true
+# Thermal
+persist.vendor.enable.thermal.genl=true
+# ZRAM Size, 4G on Anorak
+ro.vendor.swap.zram_size=4294967296
+# ZRAM Writeback
+ro.zram.first_wb_delay_mins=10
+ro.zram.mark_idle_delay_mins=3
+ro.zram.periodic_wb_delay_hours=0
+ro.zram.periodic_wb_delay_minutes=15
+ro.zram.writeback_in_interactive_only=true
+ro.zram.writeback_rate_megabytes_per_day=3072
+zram.force_writeback=true
+####################################
+# from device/meta/panther-common/vendor.prop
+####################################
+# Bluetooth
+persist.vendor.bt.a2dp_offload_cap=sbc-aac-aptx
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aac-aptx
+vendor.audio.feature.a2dp_offload.enable=true
+# Camera
+persist.ovr.mrsystemservice.color_cam_frame_rate=60
+persist.vendor.camera.enable_fastpath=false
+persist.vendor.camera.enable_ultralite=true
+persist.vendor.camera.isp.enablePiAWB=true
+persist.vendor.camera.multicam.multicameralogicalxmlfile=panther.xml
+persist.vendor.camera.rgb.enable_3a=true
+persist.vendor.camera.teton.dynamic_util_freq=true
+persist.vendor.camera.teton.output_yuv=true
+persist.vendor.ovr.sensor.service.enable_high_frequency_telemetry=true
+ro.hardware.camera=qcom
+# Display
+ro.surface_flinger.primary_display_orientation=ORIENTATION_270
+vendor.display.cac_ipd_adjust_0=52
+vendor.display.cac_ipd_adjust_1=-60
+vendor.display.cac_ipd_adjust_2=-170
+vendor.display.cac_normalization=492.234
+vendor.display.cac_offset_x=80
+vendor.display.cac_offset_y=-70
+vendor.display.cac_pixel_pitch=0.03285
+vendor.display.cac_scale_blue=0.990
+vendor.display.cac_scale_blue_k1=0.0
+vendor.display.cac_scale_red=1.006
+vendor.display.cac_scale_red_k1=0
+vendor.display.single_pass_cac_enable=1
+# Oculus
+persist.vendor.oculus.sensor.service.impl=sensorservice
+# Sensorlock
+ro.vendor.sensorlock.consumer=/sys/devices/platform/vendor/vendor:l14b_userspace_consumer/state
+# Sensors
+persist.vendor.flicker.lock_utility_freq=true
+persist.vendor.flicker.use_visible_chan=true
+# Wifi
+persist.vendor.wifi.cmd.cs.p2p.oculus=false
+persist.vendor.wifi.cmd.elna.bypass.mode=false
+persist.vendor.wifi.cmd.mcc.quota=false
+persist.vendor.wifi.devparams.enable=true
+persist.vendor.wifi.devparams.ppdu_dur_offset_us=0
+persist.vendor.wifi.devparams.ppdu_dur_us=5484
+persist.vendor.wifi.devparams.rts_enable=1
+persist.vendor.wifi.devparams.sifs_burst_dur_us=-1
+persist.vendor.wifi.devparams.tx_ampdu_limit=64
+persist.vendor.wifi.devparams.tx_amsdu_limit=4
+persist.vendor.wifi.devparams.tx_retry_limit=7
+persist.vendor.wifi.frequency.block.enable=true
+persist.vendor.wifi.im3.mitigation.band2g=true
+persist.vendor.wifi.mipiclock.enable=true
+persist.vendor.wifi.powerjump.detect.enable=true
+persist.vendor.wifi.powerjump.detect.rssi.threshold=-55
+persist.vendor.wifi.txchain.enable.p2p=false
+persist.vendor.wifi.txchain.qualcomm=true
+persist.vendor.wifi.txpower.dbm.lower=5
+persist.vendor.wifi.txpower.dbm.middle=9
+persist.vendor.wifi.txpower.dbm.p2p=12
+persist.vendor.wifi.txpower.dbm.upper=20
+persist.vendor.wifi.txpower.enable.p2p=false
+persist.vendor.wifi.txpower.enable.sta=false
+persist.vendor.wifi.txpower.enable.sta.per_chain=false
+persist.vendor.wifi.txpower.rssi.lower=-70
+persist.vendor.wifi.txpower.rssi.middle.lower=-65
+persist.vendor.wifi.txpower.rssi.middle.upper=-60
+persist.vendor.wifi.txpower.rssi.upper=-55
+persist.vendor.wifi.txpower.unit.half.dbm=false
+persist.vendor.wifi.txpower.perchain.limit_default_dbm0=20
+persist.vendor.wifi.txpower.perchain.limit_default_dbm1=20
+persist.vendor.wifi.txpower.perchain.limit_low_dbm0=13
+persist.vendor.wifi.txpower.perchain.limit_low_dbm1=20
+persist.vendor.wifi.txpower.perchain.low_rssi_lower=-85
+persist.vendor.wifi.txpower.perchain.low_rssi_upper=-75
+####################################
+# from sky_out/target/product/panther/obj/ETC/android_info_prop_intermediates/android_info.prop
+####################################
+####################################
+# from variable ADDITIONAL_VENDOR_PROPERTIES
+####################################
+ro.vndk.version=34
+ro.bionic.arch=arm64
+ro.bionic.cpu_variant=cortex-a78c
+ro.bionic.2nd_arch=arm
+ro.bionic.2nd_cpu_variant=cortex-a78c
+persist.sys.dalvik.vm.lib.2=libart.so
+dalvik.vm.isa.arm64.variant=cortex-a78c
+dalvik.vm.isa.arm64.features=default
+dalvik.vm.isa.arm.variant=cortex-a78c
+dalvik.vm.isa.arm.features=default
+ro.boot.dynamic_partitions=true
+ro.product.first_api_level=32
+ro.board.first_api_level=34
+ro.vendor.build.security_patch=2018-06-05
+ro.product.board=panther
+ro.board.platform=anorak
+ro.hwui.use_vulkan=
+ro.build.ab_update=true
+####################################
+# from variable PRODUCT_VENDOR_PROPERTIES
+####################################
+ro.zygote=zygote32
+ro.logd.size.stats=64K
+log.tag.stats_log=I
+dalvik.vm.heapstartsize=8m
+# Removed by post_process_props.py because overridden by dalvik.vm.heapgrowthlimit=256m
+#dalvik.vm.heapgrowthlimit?=192m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapmaxfree=8m
+ro.apex.updatable=true
+# Removed by post_process_props.py because overridden by ro.recovery.usb.vid=2833
+#ro.recovery.usb.vid?=18D1
+# Removed by post_process_props.py because overridden by ro.recovery.usb.adb.pid=0086
+#ro.recovery.usb.adb.pid?=D001
+# Removed by post_process_props.py because overridden by ro.recovery.usb.fastboot.pid=0081
+#ro.recovery.usb.fastboot.pid?=4EE0
+ro.recovery.usb.adb.pid=0086
+ro.recovery.usb.fastboot.pid=0081
+ro.recovery.usb.vid=2833
+ro.control_privapp_permissions=enforce
+external_storage.projid.enabled=1
+external_storage.casefold.enabled=1
+external_storage.sdcardfs.enabled=0
+ro.virtual_ab.enabled=true
+persist.vendor.dolby.enable.cache=false
+vendor.dolby.multiViewMrt=false
+####################################
+# from variable PRODUCT_DEFAULT_PROPERTY_OVERRIDES
+####################################
+####################################
+# from variable PRODUCT_PROPERTY_OVERRIDES
+####################################
+ro.carrier=unknown
+ro.config.notification_sound=OnTheHunt.ogg
+ro.config.alarm_alert=Alarm_Classic.ogg
+dalvik.vm.heapgrowthlimit=256m
+</code></pre>
+
+    </main>
+
+</body>
+</html>
